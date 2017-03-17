@@ -1,2 +1,2 @@
 # mini-song
-me and her
+> It's all about me and her
