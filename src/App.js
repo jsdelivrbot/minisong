@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Timer from './components/Timer.jsx'
-
-
-// const metTime = moment('20170307T180000')
-// const now = moment(new Date())
-// const ddd = now - metTime
-// const a = moment.duration(ddd / 1000, 'seconds')
-// const c = a._data.seconds
+import Video from './components/Video.jsx'
 
 
 
@@ -16,6 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <Timer />
+        <Video />, 
       </div>
     );
   }
