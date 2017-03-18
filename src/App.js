@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Timer from './components/Timer.jsx'
-import Video from './components/Video.jsx'
+// import Video from './components/Video.jsx'
 
 
 
@@ -10,7 +10,6 @@ class App extends Component {
     return (
       <div className="App">
         <Timer />
-        <Video />, 
       </div>
     );
   }
