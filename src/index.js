@@ -2,12 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
-import bg from './love.png';
+import Background from './love.png';
 
+
+const sectionStyle = {
+  width: '100%',
+  height: '100%',
+  backgroundImage: `url(${Background})`,
+};
 
 
 ReactDOM.render(
-  <App />,
+  <div className="bg" style={ sectionStyle }>
+    <App />
+  </div>,
   document.getElementById('root')
 );
 

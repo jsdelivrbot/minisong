@@ -1,8 +1,21 @@
-html {
+/* html { */
+/*   margin: 0; */
+/*   position: fixed; */
+/*   padding: 0; */
+/*   background-image: url("https://lh3.googleusercontent.com/i9JTbGNSPrbecSNpknQ5gievcC3V4kX9UkcngH_4R4_s4dZgsXXlpKrbRSPyH97p7lzlEjdqdbY1ZMzia9zAmDx5WhPrsWvKEERdJr6LvtRIEvS3GZEC3FlsYtIbHvZNvvldPTeApaK330LCeUyulKAxDlQeTO0tt4g04-Ep05wDVkPz0B7D5gYVbxVcth1ClqP7LRfnZaeTYI29Y7IEzG9NfjSBpcS7GUOpjifSFlyUnXUlItxC1sg-yRyczmxlEwZ-thoXSzj-3DrvwYNOiYKh-kMR2IIP_uGQGhc_HRznTubESrdk4PXAVEETuf3KdXncTMUescrC9JMA_HUnoXgZiwl_l7Gvg6Tv4k5qkW2S1hXl1DEUhMN5zJSTtjzNEcFdylZ0rhh6rqdDOAVWqFw-KqKGXyl-jY4R3Tn8dZM23OLeKNjwV0faXlFe6lShNSKZC3Its-nBu0rBp6JijtVpIw-08egMt4_XCu547X3wISf98yj3Dv0D6YGQu2dnR_BfxEG9vYpEVeErcWq7p3KJuMBTuRv3tnXLyc6HfI3JCeTQQXg8BwmP1PMZu0O7Znkk14EOWmHs1VHB1KDMXXjP9aXEHrAD300wS7wobVzPW8aTWQ5W=w640-h479-no"); */
+/*   background-repeat: no-repeat; */
+/*   background-position: center; */
+/*   background-attachment: fixed; */
+/*   webkit-background-size: cover; */
+/*   -moz-background-size: cover; */
+/*   -o-background-size: cover; */
+/*   background-size: cover; */
+/* } */
+
+.bg {
   margin: 0;
   position: fixed;
   padding: 0;
-  background-image: url("https://lh3.googleusercontent.com/i9JTbGNSPrbecSNpknQ5gievcC3V4kX9UkcngH_4R4_s4dZgsXXlpKrbRSPyH97p7lzlEjdqdbY1ZMzia9zAmDx5WhPrsWvKEERdJr6LvtRIEvS3GZEC3FlsYtIbHvZNvvldPTeApaK330LCeUyulKAxDlQeTO0tt4g04-Ep05wDVkPz0B7D5gYVbxVcth1ClqP7LRfnZaeTYI29Y7IEzG9NfjSBpcS7GUOpjifSFlyUnXUlItxC1sg-yRyczmxlEwZ-thoXSzj-3DrvwYNOiYKh-kMR2IIP_uGQGhc_HRznTubESrdk4PXAVEETuf3KdXncTMUescrC9JMA_HUnoXgZiwl_l7Gvg6Tv4k5qkW2S1hXl1DEUhMN5zJSTtjzNEcFdylZ0rhh6rqdDOAVWqFw-KqKGXyl-jY4R3Tn8dZM23OLeKNjwV0faXlFe6lShNSKZC3Its-nBu0rBp6JijtVpIw-08egMt4_XCu547X3wISf98yj3Dv0D6YGQu2dnR_BfxEG9vYpEVeErcWq7p3KJuMBTuRv3tnXLyc6HfI3JCeTQQXg8BwmP1PMZu0O7Znkk14EOWmHs1VHB1KDMXXjP9aXEHrAD300wS7wobVzPW8aTWQ5W=w640-h479-no");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -10,10 +23,4 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-body {
-  /* background: #FFF; */
-  /* background: linear-gradient(black, white); */
-  /* background: radial-gradient(circle, black, white); */
 }
