@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
-import Background from './love.png';
+import Background from './love.jpg';
 
 
 const sectionStyle = {

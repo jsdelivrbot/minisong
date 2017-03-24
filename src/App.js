@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Timer from './components/Timer.jsx'
-// import Video from './components/Video.jsx'
-
 
 
 class App extends Component {
@@ -14,9 +12,6 @@ class App extends Component {
     );
   }
 }
-
-
-// setInterval(App, 1000);
 
 export default App;
 

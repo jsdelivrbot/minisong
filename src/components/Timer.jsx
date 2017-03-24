@@ -7,13 +7,6 @@ class Timer extends React.Component {
   constructor(props) {
     super(props);
 
-    // const metTime = moment('20170307T180000')
-    // const now = moment(new Date())
-    // const ddd = now - metTime
-    // const a = moment.duration(ddd / 1000, 'seconds')
-    // const c = a._data.hours
-
-
     this.state = {
       now: moment(new Date()),
     }
@@ -44,7 +37,9 @@ class Timer extends React.Component {
     return (
     <div className="container">
       <div className="counter">
-        <div className="title">Mini&Song<br></br>been together for</div>
+        <div className="minisong">
+        <div className="title">Mini&amp;Song<br></br>been together for</div>
+        </div>
         <div className="inner">
           <div className="days-title">Days
             <div className="days">{ moment.duration(diff/1000, 'seconds')._data.days }</div>
