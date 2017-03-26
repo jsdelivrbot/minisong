@@ -28,6 +28,7 @@ class Timer extends React.Component {
       now: moment(new Date()),
     });
   }
+  // <div className="title">Mini&amp;Song<br></br>been together for</div>
 
   render() {
 
@@ -37,14 +38,21 @@ class Timer extends React.Component {
     return (
     <div className="container">
       <div className="counter">
-        <div className="minisong">
-        <div className="title">Mini&amp;Song<br></br>been together for</div>
+        <div className="title">
+          <div className="minisong">
+            <div className="mini">Mini</div>
+            <div className="amp">&amp;</div>
+            <div className="song">Song</div>
+          </div>
+          <div className="together">been together for</div>
         </div>
+
+
         <div className="inner">
-          <div className="days-title">Days
+          <div className="days-title fadeIn one">Days
             <div className="days">{ moment.duration(diff/1000, 'seconds')._data.days }</div>
           </div>
-          <div className="hours-title">Hours
+          <div className="hours-title fadeIn two">Hours
             <div className="hours">{ moment.duration(diff/1000, 'seconds')._data.hours }</div>
           </div>
           <div className="minutes-title">Minutes

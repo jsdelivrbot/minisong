@@ -1,30 +1,15 @@
-/* html { */
-/*   margin: 0; */
-/*   position: fixed; */
-/*   padding: 0; */
-/*   /1* background-image: url("https://lh3.googleusercontent.com/i9JTbGNSPrbecSNpknQ5gievcC3V4kX9UkcngH_4R4_s4dZgsXXlpKrbRSPyH97p7lzlEjdqdbY1ZMzia9zAmDx5WhPrsWvKEERdJr6LvtRIEvS3GZEC3FlsYtIbHvZNvvldPTeApaK330LCeUyulKAxDlQeTO0tt4g04-Ep05wDVkPz0B7D5gYVbxVcth1ClqP7LRfnZaeTYI29Y7IEzG9NfjSBpcS7GUOpjifSFlyUnXUlItxC1sg-yRyczmxlEwZ-thoXSzj-3DrvwYNOiYKh-kMR2IIP_uGQGhc_HRznTubESrdk4PXAVEETuf3KdXncTMUescrC9JMA_HUnoXgZiwl_l7Gvg6Tv4k5qkW2S1hXl1DEUhMN5zJSTtjzNEcFdylZ0rhh6rqdDOAVWqFw-KqKGXyl-jY4R3Tn8dZM23OLeKNjwV0faXlFe6lShNSKZC3Its-nBu0rBp6JijtVpIw-08egMt4_XCu547X3wISf98yj3Dv0D6YGQu2dnR_BfxEG9vYpEVeErcWq7p3KJuMBTuRv3tnXLyc6HfI3JCeTQQXg8BwmP1PMZu0O7Znkk14EOWmHs1VHB1KDMXXjP9aXEHrAD300wS7wobVzPW8aTWQ5W=w640-h479-no"); *1/ */
-/*   background-repeat: no-repeat; */
-/*   background-position: center; */
-/*   background-attachment: fixed; */
-/*   webkit-background-size: cover; */
-/*   -moz-background-size: cover; */
-/*   -o-background-size: cover; */
-/*   background-size: cover; */
-/* } */
-
 html, body{
   margin:0 !important;
   padding:0 !important;
+  position: relative;
 }
 .bg {
   position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  margin: 0;
-  /* position: fixed; */
-  padding: 0;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -33,21 +18,25 @@ html, body{
   -o-background-size: cover;
   background-size: cover;
   /* opacity: 0; */
-  -webkit-animation: fade 1s;
-  -moz-animation: fade 1s;
-  -ms-animation: fade 1s;
-  -o-animation: fade 1s;
-  animation: fade 1s;
-  /* animation-name: fade; */
-  /* animation-duration: 1s; */
-  /* animation-timing-function: ease-in; */
-  /* animation-iteration-count: 1; */
-  /* animation-delay: 2s; */
+  -webkit-animation: fade ease-in 4s;
+  -moz-animation: fade ease-in 4s;
+  -ms-animation: fade ease-in 4s;
+  -o-animation: fade ease-in 4s;
+  animation: fade ease-in 4s;
+  transform: scale(1.2);
 }
+
+.together {
+  transform: scaleX(0.9);
+  animation: fade-together ease-in 3s forwards;
+  animation-delay: 1s;
+}
+
 
 @-webkit-keyframes fade {
   from {
     -webkit-opacity: 0;
+    transform: scale(1);
   }
   to {
     -webkit-opacity: 1;
@@ -56,6 +45,7 @@ html, body{
 
 @-moz-keyframes fade {
   from {
+    transform: scale(1);
     -moz-opacity: 0;
   }
   to {
@@ -66,6 +56,7 @@ html, body{
 @-ms-keyframes fade {
   from {
     -ms-opacity: 0;
+    transform: scale(1);
   }
   to {
     -ms-opacity: 1;
@@ -74,6 +65,7 @@ html, body{
 
 @-o-keyframes fade {
   from {
+    transform: scale(1);
     -o-opacity: 0;
   }
   to {
@@ -84,9 +76,60 @@ html, body{
 @keyframes fade {
   from {
     opacity: 0;
+    transform: scale(1);
   }
   to {
     opacity: 1;
   }
 }
 
+@keyframes fade-together {
+  from { transform: scaleX(0.9); }
+  to { transform: scaleX(1); }
+}
+
+
+
+
+@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.7s;
+-moz-animation-delay: 0.7s;
+animation-delay: 0.7s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: 1.0s;
+-moz-animation-delay:1.0s;
+animation-delay: 1.0s;
+}
+
+.fade-in.three {
+-webkit-animation-delay: 1.2s;
+-moz-animation-delay: 1.2s;
+animation-delay: 1.2s;
+}
+
+.fade-in.four {
+-webkit-animation-delay: 1.3s;
+-moz-animation-delay: 1.3s;
+animation-delay: 1.3s;
+}

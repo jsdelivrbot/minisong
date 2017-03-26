@@ -7,13 +7,14 @@
 }
 
 .container {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -70%);
 }
 .counter {
-  /* display: none; */
+  /* display: abso; */
+  /* position: absolute; */
   -webkit-animation: aniload2 1s;
   -moz-animation: aniload2 1s;
   -ms-animation: aniload2 1s;
@@ -31,13 +32,16 @@
     /* height: 100vh; */
     /* transition: opacity 1s ease-in; */
     animation-fill-mode: forwards;
+    opacity: 0;
     -webkit-animation: aniload2 4s;
     -moz-animation: aniload2 4s;
     -ms-animation: aniload2 4s;
     -o-animation: aniload2 4s;
     animation: aniload2 4s;
     /* -webkit-animation-delay: 2s; /1* Safari 4.0 - 8.0 *1/ */
-    /* animation-delay: 2s; */
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    /* opacity: 1; */
 }
 
 .title {
@@ -48,6 +52,21 @@
   font-weight: bold;
   opacity: 0.8;
 }
+
+.minisong {
+  /* align-items: center; */
+  /* flex-direction: row; */
+  justify-content: center;
+  align-self: center;
+  flex-basis: 100%;
+  display: flex;
+}
+
+.together {
+  align-self: center;
+  flex-basis: 100%;
+}
+
 
 .days-title, .hours-title, .seconds-title, .minutes-title {
     display: inline-block;
@@ -296,4 +315,3 @@
     opacity: 1;
   }
 }
-
