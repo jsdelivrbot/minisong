@@ -49,16 +49,16 @@ class Timer extends React.Component {
 
 
         <div className="inner">
-          <div className="days-title fadeIn one">Days
+          <div className="days-title fade-in one">Days
             <div className="days">{ moment.duration(diff/1000, 'seconds')._data.days }</div>
           </div>
-          <div className="hours-title fadeIn two">Hours
+          <div className="hours-title fade-in two">Hours
             <div className="hours">{ moment.duration(diff/1000, 'seconds')._data.hours }</div>
           </div>
-          <div className="minutes-title">Minutes
+          <div className="minutes-title fade-in three">Minutes
             <div className="minutes">{ moment.duration(diff/1000, 'seconds')._data.minutes }</div>
           </div>
-          <div className="seconds-title">Seconds
+          <div className="seconds-title fade-in four">Seconds
             <div className="seconds">{ moment.duration(diff/1000, 'seconds')._data.seconds }</div>
           </div>
         </div>
