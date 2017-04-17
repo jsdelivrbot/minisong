@@ -36,6 +36,9 @@ class Timer extends React.Component {
     const diffData = moment.duration(diff / 1000, 'seconds')._data
 
 
+    const diff2 = moment.duration(moment(new Date('03/07/2017 18:15:00')).diff(moment(new Date())))
+    const days2 = Math.abs(parseInt(diff2.asDays()))
+
     const start = new Date(2017, 3 ,7);
     const end = new Date();
     let days = (end - start) / 1000 / 60 / 60 / 24;
@@ -46,6 +49,7 @@ class Timer extends React.Component {
     // console.log(Math.round(days));
 
 
+    
 
     const manageDate = (date) => {
       if (date.months) {
@@ -56,6 +60,7 @@ class Timer extends React.Component {
 
     const result = manageDate(diffData)
     // console.log(parseInt(result.days.toString().slice(-2)))
+    console.log(diffData)
 
     return (
       <div className="container">
@@ -72,7 +77,7 @@ class Timer extends React.Component {
 
           <div className="inner">
             <div className="days-title fade-in one">Days
-          <div className="days">{ parseInt(result.days.toString().slice(-2))+Math.round(days) }</div>
+          <div className="days">{ days2 }</div>
             </div>
             <div className="hours-title fade-in two">Hours
           <div className="hours">{ result.hours }</div>
