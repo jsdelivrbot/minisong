@@ -36,6 +36,17 @@ class Timer extends React.Component {
     const diffData = moment.duration(diff / 1000, 'seconds')._data
 
 
+    const start = new Date(2017, 3 ,7);
+    const end = new Date();
+    let days = (end - start) / 1000 / 60 / 60 / 24;
+    // console.log(days);
+    // actually its 30 ; but due to daylight savings will show 31.0xxx
+    // which you need to offset as below
+    days -= (end.getTimezoneOffset() - start.getTimezoneOffset()) / (60 * 24);
+    // console.log(Math.round(days));
+
+
+
     const manageDate = (date) => {
       if (date.months) {
         date.days += (30 * date.months)
@@ -44,7 +55,7 @@ class Timer extends React.Component {
     }
 
     const result = manageDate(diffData)
-    // console.log(manageDate(diffData))
+    // console.log(parseInt(result.days.toString().slice(-2)))
 
     return (
       <div className="container">
@@ -61,7 +72,7 @@ class Timer extends React.Component {
 
           <div className="inner">
             <div className="days-title fade-in one">Days
-          <div className="days">{ result.days }</div>
+          <div className="days">{ parseInt(result.days.toString().slice(-2))+Math.round(days) }</div>
             </div>
             <div className="hours-title fade-in two">Hours
           <div className="hours">{ result.hours }</div>
