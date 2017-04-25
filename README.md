@@ -6,7 +6,7 @@
 	<img width="400" src="https://cdn.rawgit.com/wangsongiam/minisong/853940d1/public/logo.png" alt="app logo">
 	<br>
 	<br>
-	<img src="https://cdn.rawgit.com/wangsongiam/minisong/8306e9a5/demos/2017-04-25%2000.25.22.gif" alt="app logo">
+	<img src="https://cloud.githubusercontent.com/assets/19645990/25368910/187db914-294e-11e7-8bde-ce50a256a764.gif" alt="app logo">
 	<br>
 </h1>
 
