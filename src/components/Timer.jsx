@@ -6,7 +6,6 @@ import './Timer.css'
 class Timer extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       now: moment(new Date()),
     }
@@ -47,8 +46,6 @@ class Timer extends React.Component {
     // which you need to offset as below
     days -= (end.getTimezoneOffset() - start.getTimezoneOffset()) / (60 * 24);
     // console.log(Math.round(days));
-
-
     
 
     const manageDate = (date) => {
