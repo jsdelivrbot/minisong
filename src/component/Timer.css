@@ -1,0 +1,208 @@
+* {
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif, Georgia, serif;
+	transition: all .35s;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+  /* move to central*/
+	transform: translate(-50%, -70%);
+}
+.counter {
+	animation: aniload2 1s;
+}
+
+.inner {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	animation-fill-mode: forwards;
+	opacity: 1;
+}
+
+.title {
+	margin-bottom: 40px;
+	font-size: 50px;
+	font-style: normal;
+	font-weight: bold;
+	opacity: 0.8;
+}
+
+.minisong {
+	justify-content: center;
+	align-self: center;
+	flex-basis: 100%;
+	display: flex;
+}
+
+.together {
+	align-self: center;
+	flex-basis: 100%;
+	text-align: center;
+}
+
+.days-title, .hours-title, .seconds-title, .minutes-title {
+	display: inline-block;
+	font-size: 30px;
+	font-weight: normal;
+	margin: 0 15px;
+	text-align: center;
+}
+.days, .hours, .minutes {
+	font-size: 120px;
+	font-family: "soleil", sans-serif;
+	font-weight: bold;
+	margin: 0 15px;
+	text-align: center;
+}
+.seconds {
+	font-size: 120px;
+	font-family: "soleil", sans-serif;
+	font-weight: bold;
+	width: 140px;
+	text-align: center;
+}
+
+.simple-text {
+	position: fixed;
+	bottom: 5px;
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+}
+
+@media only screen and (max-width: 920px) {
+	.days, .hours, .minutes {
+		font-size: 75px;
+		margin: 0 10px;
+	}
+	.seconds {
+		font-size: 75px;
+		width: 90px;
+	}
+	.days-title, .hours-title, .seconds-title, .minutes-title {
+		font-size: 20px;
+		margin: 0 10px;
+	}
+
+	.simple-text {
+		font-size: 15px;
+	}
+}
+@media only screen and (max-width: 550px) {
+	.days, .hours, .minutes {
+		font-size: 40px;
+		margin: 0 10px;
+	}
+	.seconds {
+		font-size: 40px;
+		width: 70px;
+	}
+	.days-title, .hours-title, .seconds-title, .minutes-title {
+		font-size: 15px;
+		margin: 0 10px;
+	}
+
+	.title {
+		margin-bottom: 20px;
+		font-size: 15px;
+		font-weight: bold;
+		opacity: 0.8;
+	}
+
+	.simple-text {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.days, .hours, .minutes {
+		font-size: 30px;
+		margin: 0 5px;
+	}
+	.seconds {
+		font-size: 30px;
+		width: 60px;
+	}
+	.days-title, .hours-title, .seconds-title, .minutes-title {
+		font-size: 15px;
+		margin: 0 5px;
+	}
+
+	.title {
+		margin-bottom: 10px;
+		font-size: 15px;
+		font-weight: bold;
+		opacity: 0.8;
+	}
+
+	.simple-text {
+		font-size: 10px;
+	}
+}
+
+@keyframes aniload {
+	from {
+		transform: translate(-52%, -70%);
+		opacity: 0;
+	}
+	to {
+		transform: translate(-50%, -70%);
+		opacity: 1;
+	}
+}
+
+@keyframes slidein {
+	0% {
+		opacity: 0;
+		transform: translate(-20px, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0px, 0px);
+	}
+}
+
+@keyframes aniload2 {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.fade-in {
+	opacity: 0; /* make things invisible upon start */
+	animation: fadeIn ease-in-out 1;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+}
+
+.fade-in.one {
+	animation-delay: .6s;
+}
+
+.fade-in.two {
+	animation-delay: .7s;
+}
+
+.fade-in.three {
+	animation-delay: .9s;
+}
+
+.fade-in.four {
+	animation-delay: 1.15s;
+}
