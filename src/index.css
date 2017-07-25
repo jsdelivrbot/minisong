@@ -1,8 +1,8 @@
-/* html, body{ */
-/*   margin:0 !important; */
-/*   padding:0 !important; */
-/*   position: relative; */
-/* } */
+html, body{
+  margin:0 !important;
+  padding:0 !important;
+  position: relative;
+}
 /* .bg { */
 /*   position: absolute; */
 /*   position: fixed; */
