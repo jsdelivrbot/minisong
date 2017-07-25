@@ -1,22 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-import './index.css';
-import Background from './love-svg.jpg';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import registerServiceWorker from './registerServiceWorker'
+import { AppContainer } from 'react-hot-loader'
 
+function render(Component) {
+  ReactDOM.render(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
+    document.getElementById('root')
+  )
+}
 
+render(App)
 
-const sectionStyle = {
-  width: '100%',
-  height: '100%',
-  backgroundImage: `url(${Background})`,
-};
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    render(App)
+  })
+}
 
-
-ReactDOM.render(
-<div className="bg" style={sectionStyle}>
-  <App />
-</div>
-, document.getElementById('root'));
-registerServiceWorker();
+registerServiceWorker()
