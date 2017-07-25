@@ -47,8 +47,6 @@ class Timer extends React.Component {
     }
 
     const result = manageDate(diffData)
-    // console.log(parseInt(result.days.toString().slice(-2)))
-    console.log(diffData)
 
     return (
       <div className="container">
@@ -59,7 +57,7 @@ class Timer extends React.Component {
               <div className="amp">&amp;</div>
               <div className="song">Song</div>
             </div>
-            <div className="together">been together for</div>
+            {/* <div className="together">been together for</div> */}
           </div>
 
           <div className="inner">
