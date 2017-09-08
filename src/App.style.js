@@ -9,7 +9,6 @@ export const Background = styled.div`
   background-position: center;
   filter: invert(20%) brightness(74%);
   animation: fade ease-in-out 2s;
-  animation: fade-together ease-in-out 2s forwards; 
 
   @keyframes fade {
     from {
