@@ -27,17 +27,15 @@ class Timer extends React.Component {
   render() {
     const metTime = moment('20170307T180000')
     const diff = this.state.now - metTime
-    const diffData = moment.duration(diff / 1000, 'seconds')._data
+    const diffData = moment.duration(diff / 1000, 'seconds')
+      ._data
 
     const diff2 = moment.duration(
-      moment(new Date('03/07/2017 18:15:00')).diff(moment(new Date()))
+      moment(new Date('03/07/2017 18:15:00')).diff(
+        moment(new Date())
+      )
     )
     const days2 = Math.abs(parseInt(diff2.asDays()))
-
-    const start = new Date(2017, 3, 7)
-    const end = new Date()
-    let days = (end - start) / 1000 / 60 / 60 / 24
-    days -= (end.getTimezoneOffset() - start.getTimezoneOffset()) / (60 * 24)
 
     const manageDate = date => {
       if (date.months) {
@@ -71,11 +69,15 @@ class Timer extends React.Component {
             </div>
             <div className="minutes-title fade-in three">
               Minutes
-              <div className="minutes">{result.minutes}</div>
+              <div className="minutes">
+                {result.minutes}
+              </div>
             </div>
             <div className="seconds-title fade-in four">
               Seconds
-              <div className="seconds">{result.seconds}</div>
+              <div className="seconds">
+                {result.seconds}
+              </div>
             </div>
           </div>
 

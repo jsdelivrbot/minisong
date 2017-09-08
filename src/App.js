@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Timer from './component/Timer.jsx'
 import { Background } from './App.style.js'
 
@@ -7,13 +7,12 @@ import { Background } from './App.style.js'
 class App extends Component {
   render() {
     return (
-    <div>
-      <Background>
-      </Background>
-      <Timer></Timer>
-    </div>
-    );
+      <div>
+        <Background />
+        <Timer />
+      </div>
+    )
   }
 }
 
-export default App;
+export default App
